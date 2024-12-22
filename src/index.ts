@@ -31,3 +31,4 @@ export { thousandsConvert } from './thousandsConvert';
 export { bigNumAdd } from './bigNumAdd';
 export { getParams } from './getParams';
 export { stringify } from './stringify';
+export { formatSizeUnits } from './formatSizeUnits';

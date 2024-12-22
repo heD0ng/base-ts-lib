@@ -21,3 +21,4 @@ base-ts-lib
 -   bigNumAdd
 -   getParams
 -   json stringify
+-   formatSizeUnits

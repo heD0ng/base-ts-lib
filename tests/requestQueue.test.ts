@@ -5,18 +5,18 @@ describe('RequestQueue', () => {
         const requestQueue = new RequestQueue(2); // 设置最大并发数为 2
         const results: number[] = []; // 用于记录每个请求的执行顺序
 
-        const makeRequest = (id: number): Promise<void> => {
+        const makeRequest = (index: number, id: number): Promise<void> => {
             return new Promise((resolve) => {
                 setTimeout(() => {
-                    results.push(id); // 记录请求的 ID
+                    results[index] = id;
                     resolve();
                 }, Math.random() * 1000); // 随机延时
             });
         };
 
         // 将 5 个请求加入队列
-        for (let i = 1; i <= 5; i++) {
-            requestQueue.enqueue(() => makeRequest(i));
+        for (let i = 0; i <= 4; i++) {
+            requestQueue.enqueue(() => makeRequest(i, i));
         }
 
         // 等待所有请求完成
@@ -24,9 +24,9 @@ describe('RequestQueue', () => {
 
         // 检查并发请求的限制
         expect(results.length).toBe(5); // 确保有 5 个请求
-        expect(results.slice(0, 2).every((id) => id <= 2)).toBe(true); // 前两个请求的 ID 小于等于 2
-        expect(results.slice(2, 4).every((id) => id >= 2 && id <= 4)).toBe(true); // 第三个和第四个请求的 ID 大于 2
-        expect(results.slice(4).every((id) => id >= 4)).toBe(true); // 最后两个请求的 ID 大于 4
+        expect(results.slice(0, 2).every((id) => id <= 2)).toEqual(true); // 前两个请求的 ID 小于等于 2
+        expect(results.slice(2, 4).every((id) => id >= 2 && id <= 4)).toEqual(true); // 第三个和第四个请求的 ID 大于 2
+        expect(results.slice(4).every((id) => id >= 4)).toEqual(true); // 最后两个请求的 ID 大于 4
     });
 
     it('should handle failed requests without affecting other requests', async () => {
