@@ -30,3 +30,4 @@ export { thousandsConvert } from './thousandsConvert';
 // 2024-12-22
 export { bigNumAdd } from './bigNumAdd';
 export { getParams } from './getParams';
+export { stringify } from './stringify';

@@ -6,17 +6,18 @@ base-ts-lib
 
 ## 2024-12-20
 
-* retry
-* curry
-* deepCopy 
+-   retry
+-   curry
+-   deepCopy
 
 ## 2024-12-21
 
-* flatten 
-* push 
-* thousandsConvert
+-   flatten
+-   push
+-   thousandsConvert
 
 ## 2024-12-22
 
-* bigNumAdd
-* getParams
+-   bigNumAdd
+-   getParams
+-   json stringify
