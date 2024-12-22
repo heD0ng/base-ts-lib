@@ -26,3 +26,7 @@ export { deepCopy } from './deepCopy';
 export { flatten } from './flatten';
 export { push } from './push';
 export { thousandsConvert } from './thousandsConvert';
+
+// 2024-12-22
+export { bigNumAdd } from './bigNumAdd';
+export { getParams } from './getParams';

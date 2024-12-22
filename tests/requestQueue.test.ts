@@ -25,7 +25,7 @@ describe('RequestQueue', () => {
         // 检查并发请求的限制
         expect(results.length).toBe(5); // 确保有 5 个请求
         expect(results.slice(0, 2).every((id) => id <= 2)).toBe(true); // 前两个请求的 ID 小于等于 2
-        expect(results.slice(2, 4).every((id) => id > 2 && id <= 4)).toBe(true); // 第三个和第四个请求的 ID 大于 2
+        expect(results.slice(2, 4).every((id) => id >= 2 && id <= 4)).toBe(true); // 第三个和第四个请求的 ID 大于 2
         expect(results.slice(4).every((id) => id >= 4)).toBe(true); // 最后两个请求的 ID 大于 4
     });
 

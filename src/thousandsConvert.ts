@@ -4,6 +4,7 @@
  * @returns 千分位数字
  */
 export const thousandsConvert = (num: number) => {
+    if (num == 0 && typeof num === 'number') return '0';
     let [integer, decimal] = Math.abs(num).toString().split('.');
     let res = '';
     let count = 0;
