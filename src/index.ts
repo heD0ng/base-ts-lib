@@ -32,3 +32,7 @@ export { bigNumAdd } from './bigNumAdd';
 export { getParams } from './getParams';
 export { stringify } from './stringify';
 export { formatSizeUnits } from './formatSizeUnits';
+
+// 2024-12-24
+export { templateRender } from './template';
+export { EventEmit } from './eventEmit';

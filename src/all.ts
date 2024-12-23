@@ -1,6 +1,6 @@
 /**
  *  @description promise.all
- * @param arr: promise list
+ *  @param arr: promise list
  */
 export const all = (arr: any[]) => {
     const res = [];
