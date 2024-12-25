@@ -23,10 +23,13 @@ base-ts-lib
 -   json stringify
 -   formatSizeUnits
 
-## 2024-12-23
+## 2024-12-24
 
 - templateRender
 
 - EventEmit
 
-  
+
+## 2024-12-26
+
+- lazyLoad

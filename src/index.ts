@@ -36,3 +36,6 @@ export { formatSizeUnits } from './formatSizeUnits';
 // 2024-12-24
 export { templateRender } from './template';
 export { EventEmit } from './eventEmit';
+
+// 2024-12-26
+export { lazyLoad } from './lazyLoad';
