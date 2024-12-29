@@ -25,11 +25,14 @@ base-ts-lib
 
 ## 2024-12-24
 
-- templateRender
+-   templateRender
 
-- EventEmit
-
+-   EventEmit
 
 ## 2024-12-26
 
-- lazyLoad
+-   lazyLoad
+
+## 2024-12-29
+
+-   isEqual

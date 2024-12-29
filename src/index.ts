@@ -39,3 +39,5 @@ export { EventEmit } from './eventEmit';
 
 // 2024-12-26
 export { lazyLoad } from './lazyLoad';
+
+export { isEqual } from './isEqual';
